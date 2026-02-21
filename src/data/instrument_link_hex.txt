@@ -1,7 +1,7 @@
 instrument	inst	link_de	link_en	link_fr	hex
 Start-up Core Coaching	Begleitung von Start-ups	/de/begleitung-start-ups	/en/support-for-start-ups	/fr/accompagnement-de-start-up	#FF8674
 Innovation Booster	Starthilfe für Projekte und Vernetzung	/de/starthilfe-projekte-vernetzung	/en/project-set-up-assistance-and-networking	/fr/aide-au-demarrage-projets-mise-en-reseau	#FCE300
-BRIDGE: Proof of Concept	Förderung für Schweizer Innovationsprojekte	/de/projekte-forschende#bridge-proof-of-concept	/en/projects-researchers#bridge-proof-of-concept	/fr/projets-chercheurs#bridge-proof-of-concept	#06F7DA
+BRIDGE Proof of Concept	Förderung für Schweizer Innovationsprojekte	/de/projekte-forschende#bridge-proof-of-concept	/en/projects-researchers#bridge-proof-of-concept	/fr/projets-chercheurs#bridge-proof-of-concept	#06F7DA
 Innovationsprojekte ohne Umsetzungspartner	Förderung für Schweizer Innovationsprojekte	/de/projekte-forschende	/en/projects-researchers	/fr/projets-chercheurs	#06F7DA
 Innovationsscheck	Förderung für Schweizer Innovationsprojekte	/de/projekte-unternehmen-forschende#innovationsscheck	/en/projects-companies-researchers#innovation-cheques	/fr/projets-entreprises-chercheurs#cheque-d-innovation	#06F7DA
 Innovationsprojekte mit Umsetzungspartner	Förderung für Schweizer Innovationsprojekte	/de/projekte-unternehmen-forschende	/en/projects-companies-researchers	/fr/projets-entreprises-chercheurs	#06F7DA

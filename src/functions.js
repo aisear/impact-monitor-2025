@@ -272,8 +272,8 @@ export function draw_fin_plot(
   displayXAxis,
   displayCaption = false
 ) {
-  const instrCol = lang === "de" ? "instrument" : `instrument_${lang}`;
-  const labelCol = lang === "de" ? "label" : `label_${lang}`;
+  const instrCol = `instrument_${lang}`;
+  const labelCol = `label_${lang}`;
 
   const data = aq
     .from(daten_controlling)
@@ -291,9 +291,8 @@ export function draw_fin_plot(
       ? data.filter((d) => d.FA === funding)
       : data.filter((d) => (d.type === type) & (d.FA === funding));
 
-  // Bridge instrument names differ by language (DE has colon, EN/FR don't)
-  const bridgePOC = lang === "de" ? instruments.BP : "BRIDGE Proof of Concept";
-  const bridgeDisc = lang === "de" ? instruments.BD : "BRIDGE Discovery";
+  const bridgePOC = instruments.BP;
+  const bridgeDisc = instruments.BD;
   const startupSpecial = lang === "de"
     ? "Start-up Innovationsprojekte (2023ff)"
     : lang === "fr"
@@ -869,21 +868,21 @@ export function draw_dn(
 // Ergebnisse Förderangebote
 
 export function drawMiniPlot(instrument, funding = true) {
-  const labelField = lang === "de" ? "label" : `label_${lang}`;
+  const labelField = `label_${lang}`;
 
   const df =
     instrument !== "Innovation Booster"
-      ? daten_controlling.filter((d) => d.instrument === instrument)
+      ? daten_controlling.filter((d) => d.instrument_de === instrument)
       : [
           {
             FA: "Starthilfe für Projekte und Vernetzung",
             inst: "Starthilfe für Projekte und Vernetzung",
             type: "Starthilfe für Projekte und Vernetzung",
-            instrument: "Innovation Booster",
+            instrument_de: "Innovation Booster",
             year: 2021,
             funding: 4.9,
             n: 12,
-            label: "Innovation Booster",
+            label_de: "Innovation Booster",
             label_en: "Innovation Booster",
             label_fr: "Innovation Booster",
             monitoring: "Ja"
@@ -892,11 +891,11 @@ export function drawMiniPlot(instrument, funding = true) {
             FA: "Starthilfe für Projekte und Vernetzung",
             inst: "Starthilfe für Projekte und Vernetzung",
             type: "Starthilfe für Projekte und Vernetzung",
-            instrument: "Innovation Booster",
+            instrument_de: "Innovation Booster",
             year: 2022,
             funding: 8,
             n: 18,
-            label: "Innovation Booster",
+            label_de: "Innovation Booster",
             label_en: "Innovation Booster",
             label_fr: "Innovation Booster",
             monitoring: "Ja"
@@ -905,11 +904,11 @@ export function drawMiniPlot(instrument, funding = true) {
             FA: "Starthilfe für Projekte und Vernetzung",
             inst: "Starthilfe für Projekte und Vernetzung",
             type: "Starthilfe für Projekte und Vernetzung",
-            instrument: "Innovation Booster",
+            instrument_de: "Innovation Booster",
             year: 2023,
             funding: 7,
             n: 17,
-            label: "Innovation Booster",
+            label_de: "Innovation Booster",
             label_en: "Innovation Booster",
             label_fr: "Innovation Booster",
             monitoring: "Ja"

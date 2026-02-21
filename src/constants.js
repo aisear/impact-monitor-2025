@@ -10,8 +10,8 @@ export const instruments = {
   IP: "Innovationsprojekte mit Umsetzungspartner",
   RP: "Innovationsprojekte ohne Umsetzungspartner",
   IS: "Innovationsscheck",
-  BP: "BRIDGE: Proof of Concept",
-  BD: "BRIDGE: Discovery",
+  BP: "BRIDGE Proof of Concept",
+  BD: "BRIDGE Discovery",
   FI: "Flagship Initiative",
 
   // Begleitung von Start-ups
