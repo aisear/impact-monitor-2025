@@ -34,66 +34,74 @@ export default {
   base,
   title: "Impact monitor",
 
-  // Note: Observable Framework only supports one level of section nesting.
-  // Sub-sections inside a section would be incorrectly treated as pages with path="undefined".
-  // Each language section therefore uses a flat list of direct page entries.
+  // Two-level navigation: top-level sections are content groups (or single pages),
+  // all at the same level regardless of language. Non-active language items are
+  // hidden by CSS in head({path}) using href-based selectors.
   pages: [
-    {
-      name: "Deutsch",
-      open: false,
-      pages: [
-        { name: "Einleitung", path: "/de/index" },
-        { name: "Methodische Grundlagen", path: "/de/methodische-grundlagen" },
-        { name: "Förderangebote und Inhalte", path: "/de/foerderangebote-und-inhalte" },
-        { name: "Vergleichende Ergebnisse", path: "/de/vergleichende-ergebnisse" },
-        { name: "Innovationsprojekte mit Umsetzungspartner", path: "/de/projekte-unternehmen-forschende" },
-        { name: "Innovationsscheck", path: "/de/projekte-unternehmen-forschende#innovationsscheck" },
-        { name: "Innovationsprojekte ohne Umsetzungspartner", path: "/de/projekte-forschende" },
-        { name: "BRIDGE: Discovery", path: "/de/projekte-forschende#bridge-discovery" },
-        { name: "BRIDGE: Proof of Concept", path: "/de/projekte-forschende#bridge-proof-of-concept" },
-        { name: "Innovation Booster", path: "/de/starthilfe-projekte-vernetzung" },
-        { name: "Start-up Core Coaching", path: "/de/begleitung-start-ups" }
-      ]
-    },
-    {
-      name: "English",
-      open: false,
-      pages: [
-        { name: "Introduction", path: "/en/index" },
-        { name: "Editorial", path: "/en/editorial" },
-        { name: "Methodology", path: "/en/methodology" },
-        { name: "Support offers and content", path: "/en/support-offers-and-content" },
-        { name: "Comparative results", path: "/en/comparative-results" },
-        { name: "Innovation projects with implementation partners", path: "/en/projects-companies-researchers" },
-        { name: "Innovation cheques", path: "/en/projects-companies-researchers#innovation-cheques" },
-        { name: "Innovation projects without implementation partner", path: "/en/projects-researchers" },
-        { name: "BRIDGE Proof of Concept", path: "/en/projects-researchers#bridge-proof-of-concept" },
-        { name: "Innovation Booster", path: "/en/project-set-up-assistance-and-networking" },
-        { name: "Start-up Core Coaching", path: "/en/support-for-start-ups" }
-      ]
-    },
-    {
-      name: "Français",
-      open: false,
-      pages: [
-        { name: "Introduction", path: "/fr/index" },
-        { name: "Éditorial", path: "/fr/editorial" },
-        { name: "Bases méthodologiques", path: "/fr/bases-methodologiques" },
-        { name: "Offres d'encouragement et contenus", path: "/fr/offres-dencouragement-et-contenus" },
-        { name: "Résultats comparatifs", path: "/fr/resultats-comparatifs" },
-        { name: "Projets d'innovation avec partenaire", path: "/fr/projets-entreprises-chercheurs" },
-        { name: "Chèque innovation", path: "/fr/projets-entreprises-chercheurs#cheque-d-innovation" },
-        { name: "Projets d'innovation sans partenaire", path: "/fr/projets-chercheurs" },
-        { name: "BRIDGE Proof of Concept", path: "/fr/projets-chercheurs#bridge-proof-of-concept" },
-        { name: "Innovation Booster", path: "/fr/aide-au-demarrage-projets-mise-en-reseau" },
-        { name: "Start-up Core Coaching", path: "/fr/accompagnement-de-start-up" }
-      ]
-    }
+    // === DEUTSCH ===
+    { name: "Einleitung",                             path: "/de/index",                          pager: "de" },
+    { name: "Methodische Grundlagen",                 path: "/de/methodische-grundlagen",         pager: "de" },
+    { name: "Förderangebote und Inhalte",             path: "/de/foerderangebote-und-inhalte",    pager: "de" },
+    { name: "Vergleichende Ergebnisse",               path: "/de/vergleichende-ergebnisse",       pager: "de" },
+    { name: "Projekte von Unternehmen mit Forschenden", pager: "de", pages: [
+      { name: "Innovationsprojekte mit Umsetzungspartner", path: "/de/projekte-unternehmen-forschende" },
+      { name: "Innovationsscheck",                         path: "/de/projekte-unternehmen-forschende#innovationsscheck" }
+    ]},
+    { name: "Projekte von Forschenden", pager: "de", pages: [
+      { name: "Innovationsprojekte ohne Umsetzungspartner", path: "/de/projekte-forschende" },
+      { name: "BRIDGE: Discovery",                          path: "/de/projekte-forschende#bridge-discovery" },
+      { name: "BRIDGE: Proof of Concept",                   path: "/de/projekte-forschende#bridge-proof-of-concept" }
+    ]},
+    { name: "Starthilfe für Projekte und Vernetzung", pager: "de", pages: [
+      { name: "Innovation Booster", path: "/de/starthilfe-projekte-vernetzung" }
+    ]},
+    { name: "Begleitung von Start-ups", pager: "de", pages: [
+      { name: "Start-up Core Coaching", path: "/de/begleitung-start-ups" }
+    ]},
+
+    // === ENGLISH ===
+    { name: "Introduction", path: "/en/index",       pager: "en" },
+    { name: "Editorial",    path: "/en/editorial",   pager: "en" },
+    { name: "Methodology",  path: "/en/methodology", pager: "en" },
+    { name: "Results", pager: "en", pages: [
+      { name: "Support offers and content",                        path: "/en/support-offers-and-content" },
+      { name: "Comparative results",                               path: "/en/comparative-results" },
+      { name: "Innovation projects with implementation partners",   path: "/en/projects-companies-researchers" },
+      { name: "Innovation cheques",                                path: "/en/projects-companies-researchers#innovation-cheques" },
+      { name: "Innovation projects without implementation partner", path: "/en/projects-researchers" },
+      { name: "BRIDGE Proof of Concept",                           path: "/en/projects-researchers#bridge-proof-of-concept" },
+      { name: "Innovation Booster",                                path: "/en/project-set-up-assistance-and-networking" },
+      { name: "Start-up Core Coaching",                            path: "/en/support-for-start-ups" }
+    ]},
+
+    // === FRANÇAIS ===
+    { name: "Introduction",           path: "/fr/index",                  pager: "fr" },
+    { name: "Éditorial",              path: "/fr/editorial",              pager: "fr" },
+    { name: "Bases méthodologiques",  path: "/fr/bases-methodologiques",  pager: "fr" },
+    { name: "Résultats", pager: "fr", pages: [
+      { name: "Offres d'encouragement et contenus",   path: "/fr/offres-dencouragement-et-contenus" },
+      { name: "Résultats comparatifs",                path: "/fr/resultats-comparatifs" },
+      { name: "Projets d'innovation avec partenaire", path: "/fr/projets-entreprises-chercheurs" },
+      { name: "Chèque innovation",                    path: "/fr/projets-entreprises-chercheurs#cheque-d-innovation" },
+      { name: "Projets d'innovation sans partenaire", path: "/fr/projets-chercheurs" },
+      { name: "BRIDGE Proof of Concept",              path: "/fr/projets-chercheurs#bridge-proof-of-concept" },
+      { name: "Innovation Booster",                   path: "/fr/aide-au-demarrage-projets-mise-en-reseau" },
+      { name: "Start-up Core Coaching",               path: "/fr/accompagnement-de-start-up" }
+    ]}
   ],
 
   head({path}) {
     const lang = getLang(path);
-    return `<link rel="icon" href="/images/swiss-logo-flag.svg" type="image/svg+xml"><script>document.documentElement.lang="${lang}";</script><style>#observablehq-sidebar details:not(.observablehq-section-active){display:none}</style>`;
+    const hide = ["de", "en", "fr"]
+      .filter(l => l !== lang)
+      .flatMap(l => [
+        `#observablehq-sidebar li:has(a[href*="/${l}/"])`,
+        `#observablehq-sidebar details:has(a[href*="/${l}/"])`
+      ])
+      .join(",") + "{display:none}";
+    return `<link rel="icon" href="/images/swiss-logo-flag.svg" type="image/svg+xml">`
+         + `<script>document.documentElement.lang="${lang}";</script>`
+         + `<style>${hide}</style>`;
   },
 
   header({path}) {
