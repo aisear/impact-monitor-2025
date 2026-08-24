@@ -40,7 +40,7 @@ const strings = {
       snsf: "Betrag wird durch den SNF verdoppelt"
     },
     n_subcluster: {
-      xLabel: `Anteil bewilligte Innovationsvorhaben in % nach Themenbereich pro Förderangebot (⌀ ${subclusterPeriod})`,
+      xLabel: `Anteil bewilligte Födermittel in % nach Themenbereich pro Förderangebot (⌀ ${subclusterPeriod})`,
       caption: "Quelle: Cockpit/PowerBI Innosuisse (2026)"
     },
     draw_dn_sustainability: ["soziale Nachhaltigkeit", "ökologische Nachhaltigkeit", "Nachhaltigkeit"],
@@ -87,7 +87,7 @@ const strings = {
       snsf: "The amount is doubled by the SNSF"
     },
     n_subcluster: {
-      xLabel: `Share of approved innovation projects in % by subject area by support offer (⌀ ${subclusterPeriod})`,
+      xLabel: `Share of approved funding in % by thematic area and support offer (⌀ ${subclusterPeriod})`,
       caption: "Source: Cockpit / PowerBI Innosuisse (2026)"
     },
     draw_dn_sustainability: ["social sustainability", "environmental sustainability", "sustainability"],
@@ -134,7 +134,7 @@ const strings = {
       snsf: "Le montant est doublé par le FNS"
     },
     n_subcluster: {
-      xLabel: `Part des projets innovants accordés en % selon le domaine thématique par offre d'encouragement (⌀ ${subclusterPeriod})`,
+      xLabel: `Part fonds accordés en % selon le domaine thématique par offre d'encouragement (⌀ ${subclusterPeriod})`,
       caption: "Source: Cockpit / PowerBI Innosuisse (2026)"
     },
     draw_dn_sustainability: ["durabilité sociale", "durabilité environnementale", "durabilité"],
