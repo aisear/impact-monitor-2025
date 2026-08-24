@@ -372,6 +372,15 @@ export function n_subcluster(width = 755) {
   const yDomain = subclusterOrder.map(
     (de) => df_subcluster_n.find((d) => d.instrument_de === de)?.instrument_n ?? de
   );
+  const rowMax = d3.rollup(
+    df_subcluster_n,
+    (v) => d3.max(v, (d) => d.obs_value),
+    (d) => d.instrument_n
+  );
+  const data = df_subcluster_n.map((d) => ({
+    ...d,
+    isMax: d.obs_value === rowMax.get(d.instrument_n)
+  }));
   return Plot.plot({
     marginLeft: 170,
     marginRight: 50,
@@ -421,7 +430,7 @@ export function n_subcluster(width = 755) {
     marks: [
       Plot.axisY({ anchor: "left", tickSize: 0, lineWidth: 14 }),
       Plot.axisFx({ textAnchor: "start", dx: -50, tickSize: 0, lineWidth: 10 }),
-      Plot.barX(df_subcluster_n, {
+      Plot.barX(data, {
         x: 1,
         y: "instrument_n",
         fx: "subcluster",
@@ -430,16 +439,18 @@ export function n_subcluster(width = 755) {
         insetBottom: 3,
         sort: { y: "x", reverse: true }
       }),
-      Plot.barX(df_subcluster_n, {
+      Plot.barX(data, {
         x: "obs_value",
         y: "instrument_n",
         fx: "subcluster",
         fill: "subcluster",
+        stroke: (d) => (d.isMax ? "#222" : "none"),
+        strokeWidth: 1,
         insetTop: 3,
         insetBottom: 3,
         sort: { y: "x", reverse: true }
       }),
-      Plot.textX(df_subcluster_n, {
+      Plot.textX(data, {
         x: "obs_value",
         y: "instrument_n",
         fx: "subcluster",
