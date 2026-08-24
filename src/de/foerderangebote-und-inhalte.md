@@ -11,7 +11,7 @@ import { draw_fin_plot, n_subcluster} from "../functions.js"
 
 # Förderangebote und Inhalte
 
-Der gegenwärtige Stand des Wirkungsmonitorings ist so aufgebaut, dass in allen Förderangebotskategorien mindestens zum jeweils finanziell gewichtigsten Förderangebot Aussagen zur Wirksamkeit und zu ausgewählten Vergleichen gemacht werden können. Die gegenwärtigen Lücken (in aufgehellter Farbe) werden schrittweise geschlossen werden. 
+Der gegenwärtige Stand des Wirkungsmonitorings ist so aufgebaut, dass in allen Förderangebotskategorien mindestens zum jeweils finanziell gewichtigsten Förderangebot Aussagen zur Wirksamkeit und zu ausgewählten Vergleichen gemacht werden können. Die gegenwärtigen Lücken (ohne *) werden schrittweise geschlossen werden. 
  
 ## Förderung von Innovationsprojekten
 
