@@ -11,7 +11,7 @@ import { draw_fin_plot, n_subcluster} from "../functions.js"
 
 # Overview of support offers and content
 
-The current status of the impact monitoring is structured in such a way that at least for the financially most significant support offer in each category of funding offers, statements can be made on the effectiveness and selected comparisons. The current gaps (in light colour) will be closed step by step.
+The current status of the impact monitoring is structured in such a way that at least for the financially most significant support offer in each category of funding offers, statements can be made on the effectiveness and selected comparisons. The current gaps (without *) will be closed step by step.
  
 ## Funding of Innovation Projects
 
