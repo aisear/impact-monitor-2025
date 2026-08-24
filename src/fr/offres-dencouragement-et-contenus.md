@@ -11,7 +11,7 @@ import { draw_fin_plot, n_subcluster} from "../functions.js"
 
 # Aperçu des offres d'encouragement et du contenu
 
-L'état actuel du suivi de l'impact est tel que, pour toutes les catégories d'offres d'encouragement, il est possible de faire des déclarations sur l'efficacité et sur des comparaisons choisies, au moins pour l'offre d'encouragement la plus importante sur le plan financier. Pour les projets d'innovation pour start-up, il n'y a pas encore de projets achevés. Les lacunes actuelles (en couleur plus claire) seront progressivement comblées.
+L'état actuel du suivi de l'impact est tel que, pour toutes les catégories d'offres d'encouragement, il est possible de faire des déclarations sur l'efficacité et sur des comparaisons choisies, au moins pour l'offre d'encouragement la plus importante sur le plan financier. Pour les projets d'innovation pour start-up, il n'y a pas encore de projets achevés. Les lacunes actuelles (sans *) seront progressivement comblées.
  
 ## Encouragement des projets d'innovation
 
